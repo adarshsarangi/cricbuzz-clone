@@ -1,0 +1,366 @@
+
+
+body {
+  background-color: rgba(227, 230, 227, 0.877);
+  text-align: center;
+  font-family: 'Noto Sans', sans-serif;
+}
+.article-container{
+  background-color: #fff;
+  font-family: helvetica,"Segoe UI",Arial,sans-serif;
+  color: #222;
+  width: 980px;
+  margin-top: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+.article-head{
+  padding: 18px;
+  text-align: left;
+  margin-left: auto;
+  margin-right:auto;
+  width: 70%;
+  
+}
+.article-h1{
+  font-size: 36px;
+  line-height: 42px;
+  margin: 0;
+  font-weight: bold;
+  font-family: Constantia,Lucida Bright;
+}
+.writer{
+  margin: 8px;
+  display: inline-flex;
+}
+.writer-img{
+  border-radius: 100%;
+  margin: 8px;
+}
+.writer-socials{
+  margin: 8px;
+  display: inline-flex;
+}
+.article-content{
+}
+.news-para{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  width: 70%;
+  font-size: 18px;
+  line-height: 29px;
+  letter-spacing: -.003em;
+  font-family: Constantia,Lucida Bright,Lucidabright,Lucida Serif,Lucida,DejaVu Serif,Bitstream Vera Serif,Liberation Serif,Georgia,serif;
+}
+.news-end{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  width: 70%;
+  padding-bottom: 15px;
+}
+
+#comment-article{
+  font-size: 16px;
+  padding: 12px 8px;
+  border: 1px solid #d3d6db;
+  word-wrap: break-word;
+  min-height: 40px;
+  width: 100%;
+  margin: 15px 0;
+}
+#featuredMatches {
+  text-align: left;
+  width: 980px;
+  height: 24px;
+  margin-top: 6px;
+  background-color: #fff;
+  padding: 4px 16px 0px 20px;
+  font-size: 12px;
+}
+.heading-h4{
+  text-align: left;
+  height: 24px;
+  margin-top: 6px;
+  background-color: #fff;
+  padding-top: 4px;
+  padding-bottom: 16px;
+  font-size: 12px;
+}
+.boxing{
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    display: flex;
+    box-sizing: border-box;
+    list-style: none;
+    float: left;
+    min-height: 1px;
+}
+.match-list:not(:first-of-type){
+  padding: 0 11px 0 20px;
+}
+.match-list{
+    border-right: 1px solid #ecebeb;
+    line-height: 1.4;
+    padding: 0 20px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.item2{
+  display: none;
+  float: center;
+  overflow: hidden;
+}
+.item1{
+  display:block;
+  float: center;
+  overflow: hidden;
+}
+.para-team{
+  font-weight: bolder;
+  font-size: 12px;
+}
+.containerfrontpage {
+  width: 980px;
+  height: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 160px;
+  gap: 5px;
+  grid-template-areas:
+    "a a a a a a a a a a a a"
+    "b b b c c c c c e e e e"
+    "d d d c c c c c e e e e"
+    "s s s c c c c c e e e e"
+    "x x x c c c c c e e e e"
+    "x x x c c c c c e e e e"
+    "x x x c c c c c e e e e"
+    "y y y y y y y y y y y y"
+    "y y y y y y y y y y y y "
+    "y y y y y y y y y y y y";
+}
+
+h4 {
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0;
+  color: #009270;
+}
+.extra-div{
+  background-color: inherit;
+  grid-area: x;
+}
+#div1 {
+  grid-area: a;
+  margin-top: 6px;
+  background-color: white;
+  display: inline-block;
+  justify-content: space-evenly;
+  text-align: left;
+  gap: 0px;
+  width: 980px;
+}
+
+.matches-items {
+  display: flex;
+}
+
+#div1 span {
+  color: red;
+}
+
+#div2 {
+  grid-area: b;
+  background-color: white;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#div-photo{
+  margin-top: 4px;
+  grid-area:d;
+  background-color: #fff;
+  text-align: left;;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#div-schedule{
+  margin-top: 4px;
+  grid-area:s;
+  background-color: #fff;
+  text-align: left;;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#div3 {
+  grid-area: c;
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+}
+
+#div-4 {
+  grid-area: e;
+  background-color: inherit;
+  margin-top: 0;
+}
+
+.links-match {
+  color: #222;
+
+}
+.links-match:hover{
+  text-decoration: underline;
+  color: #222;
+}
+.news-content{
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  border-bottom: 1px solid #ecebeb;
+}
+.news-time {
+  color: gray;
+  font-size: 12px;
+}
+
+.latest-photo {
+  border-radius: 4px;
+}
+
+.heading-news {
+  color: gray;
+}
+.mid-news{
+  border-bottom: 0.8px solid #ecebeb;
+  padding: 15px 0 8px;
+}
+
+.mid-news-img{
+  border-radius: 4px;
+  height: 200px;
+  width: 360px;
+  margin-bottom: 8px;
+}
+.news-link-mid{
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+  text-decoration: none;
+  outline: medium none;
+}
+
+.flexIt{
+  display: flex;
+  padding-bottom: 8px;
+  padding-top: 4px;
+
+}
+
+.new-img-bottom {
+  border-radius: 6px;
+  height: 75px;
+  margin-right: 10px;
+}
+.text-news{
+  display: inline-block;
+  height: 75px;;
+}
+.news-link-small{
+  font-size: 14px;
+  color: #222;
+  text-decoration: none;
+  font-weight: bold;
+}
+.news-link-small:hover{
+  color: #222;
+}
+.sub-div{
+ padding: 10px 10px 5px;
+ margin-bottom: 5px;
+ background-color: #fff;
+ text-align: left;
+}
+.ad-img{
+  height: 300px;
+  width: 300px;
+  object-fit: fill;
+  border-radius: 4px;
+}
+
+.vid{
+  padding:5px 5px 5px 5px;
+}
+
+#more-videos {
+  background-color: #009270;
+  color: #fff;
+  border: 0px;
+  padding: 10px 18px;
+  font-size: 15px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.more-vid{
+  text-align: center;
+}
+
+.vid-img{
+  margin-top: 5px; margin-bottom:5px;border-radius:4px
+}
+.news-link-vid{
+  font-size: 18px;
+  color: #222;
+  text-decoration: none;
+  font-weight: bold;
+}
+.news-link-vid:hover{
+  color: #222;
+}
+#more-videos:hover{
+  background-color: #016e50;
+}
+
+.ico {
+  margin-right: 12px;
+  padding: 20px;
+  font-size: 30px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.ico:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fb {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.tw {
+  background: #55ACEE;
+  color: white;
+}
