@@ -68,16 +68,16 @@ a{
   display: flex;
 }
 .drop-link{
-  width: 100%;
   display: block;
-  text-align: left;
+  width: 100%;
   color: #222;
-  padding: 6px 15px;
+  padding: 6px 20px;
   white-space: nowrap;
+  z-index: 2;
 }
 .extra-link{
   width: 100%;
-  display: block;
+  display: inline-block;
   color: #222;
   padding: 4px 12px;
   white-space: nowrap;
@@ -85,6 +85,7 @@ a{
 
 .drop-link:hover {
   background-color: #dddd;
+  color: #222;
 }
 
 .dropdown:hover .dropdown-content{
