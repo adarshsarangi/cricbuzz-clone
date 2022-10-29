@@ -32,6 +32,7 @@ a{
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0;
+  overflow: hidden;
 }
 .navbar {
   overflow: hidden;
@@ -41,38 +42,50 @@ a{
 .nav-item:hover{
   background-color:#016e50 ;
   color: #fff;
+  text-decoration: none;
 }
 /* Links inside the navbar */
-.container-one a {
+.dropbtn{
+  background-color: inherit;
+  color: #fff;
+  padding: 16px;
+  font-size: 16px;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+}
+.dropbtn:hover{
+  background-color:#016e50 ;
+}
+.nav-item{
   float: left;
-  width: fit-content;
   font-size: 16px;
   text-align: center;
   text-decoration: none;
 }
 .dropdown {
-  float: left;
-  overflow:visible;
+  position: relative;
+  display: inline-block;
 }
 .dropdown-content {
+  text-align: left;
+  color: black;
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  text-align: left;
-  color: black;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index:2;
+  z-index: 2;
 }
 .divided{
   display: flex;
 }
 .drop-link{
   display: block;
-  width: 100%;
   color: #222;
   padding: 6px 20px;
-  white-space: nowrap;
+  text-decoration: none;
+  display: block;
   z-index: 2;
 }
 .extra-link{
@@ -86,6 +99,7 @@ a{
 .drop-link:hover {
   background-color: #dddd;
   color: #222;
+  text-decoration: none;
 }
 
 .dropdown:hover .dropdown-content{
