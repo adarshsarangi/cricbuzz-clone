@@ -1,0 +1,12 @@
+#head-li{
+    
+}
+.nav-li{
+    line-height: 24px;
+    text-decoration: none;
+    border-bottom: 3px;
+    color: black;
+    margin-right: 20px;
+    padding-bottom: 6px;
+    outline: medium none;
+}
