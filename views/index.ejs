@@ -179,13 +179,15 @@
     </div>
     <div class="extra-div"></div>
     <div id="div3">
-      <div class="mid-news">
-        <p class="heading-news">INDIA WOMEN TOUR OF ENGLAND</p>
-        <img class="mid-news-img" src="https://www.cricbuzz.com/a/img/v1/420x235/i1/c243195/harmanpreet-kaurs-143-powers.jpg" alt="">
-        <a class="news-link-mid" href="/article">Harmanpreet Kaur's 143 powers India to memorable series win</a>
-        <p class="heading-news">Led by Harmanpreet's fifth ODI century, India women thumped England by 88 runs to secure their maiden limited overs series in the country in 23 years</p>
-        <a class="news-link-end" href="#">Lord's game will be very emotional for us: Harmanpreet on Jhulan Goswami's retirement</a>
-      </div>
+      <%articlesAll.forEach(function(article){ %>
+        <div class="mid-news">
+          <p class="heading-news"><%=article.articleName%></p>
+          <img class="mid-news-img" src= <%=article.articleImg%> alt="">
+          <a class="news-link-mid" href="/article"><%=article.articleHeading%></a>
+          <p class="heading-news"><%=article.newsContentEnd%></p>
+          <a class="news-link-end" href="#"><%=article.newsLinkHeading%></a>
+        </div>
+      <%});%>
       <div class="mid-news">
         <p class="heading-news">WTC INTERNATIONAL 2023</p>
         <img class="mid-news-img" src="https://www.cricbuzz.com/a/img/v1/420x235/i1/c243207/commercial-reasons-behind-why.jpg" alt="">
