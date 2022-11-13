@@ -263,6 +263,9 @@ h4 {
   text-decoration: none;
   outline: medium none;
 }
+.news-link-mid:hover{
+  color: #222;
+}
 
 .flexIt{
   display: flex;

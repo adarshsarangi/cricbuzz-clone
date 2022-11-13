@@ -45,9 +45,38 @@ const article3 = new Article({
   newsContentEnd : "The Oval will be the venue for the marquee clash, with Lord's only able to stage the event in 2025",
   newsLinkHeading: "Men's Ashes 2023 to begin on June 16 at Edgbaston"
 });
-
-
-
+const article4 = new Article({
+  articleName : "SOUTH AFRICA TOUR OF INDIA, 2022",
+  articleImg : "https://www.cricbuzz.com/a/img/v1/420x235/i1/c243190/kca-dispels-fear-over-threat-t.jpg",
+  articleHeading: "KCA dispels fear over threat to India-SA T20I in Thiruvananthapuram",
+  articleLink : "/article",
+  newsContentEnd : "Doubts over the T20I surfaced following Kerala State Electricity Board's decision to pull the plug on the power supply to the Greenfield Stadium",
+  newsLinkHeading: ""
+});
+const article5 = new Article({
+  articleName : "WTC INTERNATIONAL 2023",
+  articleImg : "https://www.cricbuzz.com/a/img/v1/420x235/i1/c243207/commercial-reasons-behind-why.jpg",
+  articleHeading: "Commercial reasons behind why Lord's won't be hosting 2023 WTC final",
+  articleLink : "/article",
+  newsContentEnd : "The Oval will be the venue for the marquee clash, with Lord's only able to stage the event in 2025",
+  newsLinkHeading: "Men's Ashes 2023 to begin on June 16 at Edgbaston"
+});
+const article6 = new Article({
+  articleName : "TOUR POSTPONED",
+  articleImg : "https://www.cricbuzz.com/a/img/v1/420x235/i1/c243207/commercial-reasons-behind-why.jpg",
+  articleHeading: "Commercial reasons behind why Lord's won't be hosting 2023 WTC final",
+  articleLink : "/article",
+  newsContentEnd : "The Oval will be the venue for the marquee clash, with Lord's only able to stage the event in 2025",
+  newsLinkHeading: "Men's Ashes 2023 to begin on June 16 at Edgbaston"
+});
+const article0 = new Article({
+  articleName : "PAK VS ENG, FINAL",
+  articleImg : "https://www.cricbuzz.com/a/img/v1/420x235/i1/c248300/stokes-curran-lead-england-to.jpg",
+  articleHeading: "Stokes, Curran lead England to T20 World Cup glory",
+  articleLink : "/article",
+  newsContentEnd : "Earlier, Adil Rashid and Chris Jordan bagged a brace each",
+  newsLinkHeading: "Stokes stars in title triumph"
+});
 
 app.get("/",function(req,res){
   Article.find(function(err,foundArticles){
