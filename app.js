@@ -4,7 +4,9 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const { Db } = require("mongodb");
 
-mongoose.connect("mongodb+srv://adarshsarangi:cricbuzz-123@cricbuzz.dhz72sq.mongodb.net/cricbuzzDB");
+const mongo_key = require('./config.js');
+
+mongoose.connect("mongodb+srv://adarshsarangi:"+mongo_key+"@cricbuzz.dhz72sq.mongodb.net/cricbuzzDB");
 
 
 const app = express();
