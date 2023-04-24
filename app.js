@@ -2,8 +2,9 @@ const express = require("express");
 const ejs = require('ejs');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const { Db } = require("mongodb");
 
-mongoose.connect("mongodb://localhost:27017/cricbuzzDB");
+mongoose.connect("mongodb+srv://adarshsarangi:cricbuzz-123@cricbuzz.dhz72sq.mongodb.net/cricbuzzDB");
 
 
 const app = express();
@@ -21,6 +22,14 @@ const articleSchema = new mongoose.Schema({
 
 const Article = mongoose.model("articles",articleSchema);
 
+// const article0 = new Article({
+//   articleName : "PAK VS ENG, FINAL",
+//   articleImg : "https://www.cricbuzz.com/a/img/v1/420x235/i1/c248300/stokes-curran-lead-england-to.jpg",
+//   articleHeading: "Stokes, Curran lead England to T20 World Cup glory",
+//   articleLink : "/article",
+//   newsContentEnd : "Earlier, Adil Rashid and Chris Jordan bagged a brace each",
+//   newsLinkHeading: "Stokes stars in title triumph"
+// });
 // const article1 = new Article({
 //   articleName : "INDIA WOMEN TOUR OF ENGLAND",
 //   articleImg : "https://www.cricbuzz.com/a/img/v1/420x235/i1/c243195/harmanpreet-kaurs-143-powers.jpg",
@@ -69,14 +78,8 @@ const Article = mongoose.model("articles",articleSchema);
 //   newsContentEnd : "The Oval will be the venue for the marquee clash, with Lord's only able to stage the event in 2025",
 //   newsLinkHeading: "Men's Ashes 2023 to begin on June 16 at Edgbaston"
 // });
-// const article0 = new Article({
-//   articleName : "PAK VS ENG, FINAL",
-//   articleImg : "https://www.cricbuzz.com/a/img/v1/420x235/i1/c248300/stokes-curran-lead-england-to.jpg",
-//   articleHeading: "Stokes, Curran lead England to T20 World Cup glory",
-//   articleLink : "/article",
-//   newsContentEnd : "Earlier, Adil Rashid and Chris Jordan bagged a brace each",
-//   newsLinkHeading: "Stokes stars in title triumph"
-// });
+
+// Article.insertMany([article0,article1,article2,article3,article4,article5,article6]);
 
 app.get("/",function(req,res){
   Article.find(function(err,foundArticles){
