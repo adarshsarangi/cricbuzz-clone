@@ -3,6 +3,7 @@ const ejs = require('ejs');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const { Db } = require("mongodb");
+const PORT = process.env.port || 3030;
 
 const mongo_key = require('./config.js');
 
@@ -95,6 +96,6 @@ app.get("/article",function(req,res){
   res.render("article");
 });
 
-app.listen(3000,function(){
-  console.log("Server started on port 3000");
+app.listen(PORT,function(){
+  console.log("Server started on port ${PORT}");
 })
