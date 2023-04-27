@@ -1,29 +1,27 @@
+require("dotenv").config();
 const express = require("express");
-const ejs = require('ejs');
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
+const ejs = require("ejs");
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
 const { Db } = require("mongodb");
-const PORT = process.env.port || 3030;
+const PORT = process.env.PORT || 3030;
 
-const mongo_key = require('./config.js');
-
-mongoose.connect("mongodb+srv://adarshsarangi:"+mongo_key+"@cricbuzz.dhz72sq.mongodb.net/cricbuzzDB");
-
+mongoose.connect(process.env.MONGO_DB_URL);
 
 const app = express();
-app.set("view engine",'ejs');
+app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 const articleSchema = new mongoose.Schema({
-  articleName : String,
-  articleImg : String,
+  articleName: String,
+  articleImg: String,
   articleHeading: String,
-  articleLink : String,
-  newsContentEnd : String,
-  newsLinkHeading: String
+  articleLink: String,
+  newsContentEnd: String,
+  newsLinkHeading: String,
 });
 
-const Article = mongoose.model("articles",articleSchema);
+const Article = mongoose.model("articles", articleSchema);
 
 // const article0 = new Article({
 //   articleName : "PAK VS ENG, FINAL",
@@ -84,18 +82,18 @@ const Article = mongoose.model("articles",articleSchema);
 
 // Article.insertMany([article0,article1,article2,article3,article4,article5,article6]);
 
-app.get("/",function(req,res){
-  Article.find(function(err,foundArticles){
-    res.render("index",{articlesAll:foundArticles});
+app.get("/", function (req, res) {
+  Article.find(function (err, foundArticles) {
+    res.render("index", { articlesAll: foundArticles });
   });
 });
-app.get("/live-score",function(req,res){
+app.get("/live-score", function (req, res) {
   res.render("live_score");
 });
-app.get("/article",function(req,res){
+app.get("/article", function (req, res) {
   res.render("article");
 });
 
-app.listen(PORT,function(){
+app.listen(PORT, function () {
   console.log("Server started on port ${PORT}");
-})
+});
