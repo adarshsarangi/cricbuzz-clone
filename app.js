@@ -1,7 +1,6 @@
 require("dotenv").config();
 const express = require("express");
 const ejs = require("ejs");
-const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const { Db } = require("mongodb");
 const PORT = process.env.PORT || 3030;
@@ -38,7 +37,7 @@ const Article = mongoose.model("articles", articleSchema);
 //   articleLink : "/article",
 //   newsContentEnd : "Led by Harmanpreet's fifth ODI century, India women thumped England by 88 runs to secure their maiden limited overs series in the country in 23 years",
 //   newsLinkHeading: "Lord's game will be very emotional for us: Harmanpreet on Jhulan Goswami's retirement"
-// });
+// });sss
 // const article2 = new Article({
 //   articleName : "MUST READ",
 //   articleImg : "https://www.cricbuzz.com/a/img/v1/420x235/i1/c248177/mohammad-haris-a-mirror-to-p.jpg",
@@ -87,9 +86,11 @@ app.get("/", function (req, res) {
     res.render("index", { articlesAll: foundArticles });
   });
 });
+
 app.get("/live-score", function (req, res) {
   res.render("live_score");
 });
+
 app.get("/article", function (req, res) {
   res.render("article");
 });
